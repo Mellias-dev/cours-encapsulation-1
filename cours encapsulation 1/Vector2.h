@@ -7,9 +7,10 @@ class Vector2
 		Vector2(float,float);
 		void set_x(float x);
 		void set_y(float y);
-		float get_x();
-		float get_y();
+		float get_x() const;
+		float get_y() const;
 
+		Vector2 operator+(const Vector2& _rigth);
 
 };
 

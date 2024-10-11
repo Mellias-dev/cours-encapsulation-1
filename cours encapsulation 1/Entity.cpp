@@ -1,7 +1,7 @@
 
 #include "Entity.h"
 
-Entity::Entity() : Position(0.f, 0.f){}
+Entity::Entity(Vector2 position) : Position(position) {}
 
 void Entity::SetPositionXY(float x, float y){
 	Position.set_x(x);

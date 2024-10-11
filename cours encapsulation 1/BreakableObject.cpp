@@ -1,6 +1,6 @@
 #include "BreakableObject.h"
 #include <iostream>
-BreakableObject::BreakableObject(float x, float y, float hpmax, float hp) : Alive (hpmax , hp )
+BreakableObject::BreakableObject(float x, float y, float hpmax, float hp) : Alive (hpmax , hp ) , Entity (Vector2 (x,y))
 {
 	SetPositionXY(x, y);
 	std::cout << " Breakable Object just created at x = " << GetPositionX() 
@@ -10,7 +10,8 @@ BreakableObject::BreakableObject(float x, float y, float hpmax, float hp) : Aliv
 
 void BreakableObject::TakeDamage(float damage)
 {
-	if (GetHP() <= 0)
+	HP -= damage;
+	if (HP <= 0)
 	{
 		std::cout << " Breakable Object just broke " << std::endl;
 	}

@@ -8,6 +8,8 @@
 #include "Entity.h"
 #include "StaticObject.h"
 #include "BreakableObject.h"
+#include "Mob.h"
+#include "Player.h"
 int main(int argc, const char* argv[]) {
     // entrer un prénom et le mettre dans un Array,
     // puis recracher tous les composant de l'Array.
@@ -46,14 +48,28 @@ int main(int argc, const char* argv[]) {
     std::cout << "Vecteur :  x : " << V.get_x() << " y : " << V.get_y() << std::endl;
     */
     //Test exercice 2 :
-/*
-Entity E;
-E.SetPositionXY(9.f, 15.f);
-std::cout << " La position en x est " << E.GetPositionX() << " et en y est " << E.GetPositionY() << std::endl;
-*/
-// Test exercice 6 :
-/*StaticObject SO(5.f, 8.f);*/
-//Test exercice 7 :
-/*BreakableObject(4.f, 9.f, 45, 25);*/
-
+    /*
+    Entity E;
+    E.SetPositionXY(9.f, 15.f);
+    std::cout << " La position en x est " << E.GetPositionX() << " et en y est " << E.GetPositionY() << std::endl;
+    */
+    // Test exercice 6 :
+    /*StaticObject SO(5.f, 8.f);*/
+    //Test exercice 7 :
+    /*BreakableObject(4.f, 9.f, 45, 25);*/
+    //Test exercice 8 :
+    /*Vector2 V(3, 1);
+    Mob M(6, 11, 45, 25, V,5);
+    M.Move(V,5);
+    */
+    //Test exercice 10 :
+    /*StaticObject SO(5.f, 8.f);
+    BreakableObject BO(4.f, 9.f, 45, 25);
+    BO.TakeDamage(30);
+    Vector2 V(3, 1);
+    Mob M(6, 11, 45, 10, V, 5);
+    M.Move(V, 1);
+    Player P1(1, 1, 45, 25, V, 3);
+    P1.Attack(M, 10);
+    */
 };

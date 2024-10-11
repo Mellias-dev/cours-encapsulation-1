@@ -7,7 +7,7 @@ class Mob : public Entity , public Alive , public AMovable , public Vector2
 {
 public:
 	Mob(float x, float y, float hpmax, float hp, Vector2 direction, float s);
-	void TakeDamage(float damage) override;
-	void Move(Vector2 direction, float s) override;
+	virtual void TakeDamage(float damage) override;
+	virtual void Move(Vector2 direction, float s) override;
 };
 

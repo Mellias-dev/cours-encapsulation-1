@@ -7,6 +7,7 @@ class Alive
 		Alive(float hpmax, float hp);
 		virtual float GetHPMax();
 		virtual float GetHP();
+		virtual bool IsAlive();
 		virtual void TakeDamage(float damage);
 
 };

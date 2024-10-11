@@ -12,6 +12,14 @@ float Alive::GetHP()
 	return HP;
 }
 
+bool Alive::IsAlive()
+{
+	if (HP <= 0)
+	{
+		return false;
+	}
+}
+
 void Alive::TakeDamage(float damage)
 {
 	HP -= damage;
